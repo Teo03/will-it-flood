@@ -1,5 +1,6 @@
 import React from 'react';
 var ol = require('openlayers');
+require('openlayers/css/ol.css');
 const Map = ol.Map;
 const View = ol.View;
 const ImageLayer = ol.layer.Image;
@@ -8,12 +9,10 @@ const fromLonLat = ol.proj.fromLonLat;
 const RasterSource = ol.source.Raster;
 const TileJSON = ol.source.TileJSON;
 const XYZ = ol.source.XYZ;
-require('openlayers/css/ol.css');
 
 class MapScreen extends React.Component {
  
   componentDidMount() {
-
     function flood(pixels, data) {
       const pixel = pixels[0];
       if (pixel[3]) {
@@ -75,16 +74,12 @@ class MapScreen extends React.Component {
       event.data.level = control.value;
     });
 
-    this.setState({ 
-      map: map
-    });
-
   }
 
   render () {
     return (
       <div>
-          <div id="map" ref="mapContainer"> </div>
+          <div id="map"></div>
           <p>Water level: </p><span id="output"></span> m
           <input id="level" type="range" min="0" max="300" defaultValue='0'/>
       </div>
