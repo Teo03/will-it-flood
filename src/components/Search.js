@@ -1,9 +1,11 @@
 import React from 'react';
+import Bar from './Bar';
 
 function Search() {
   return (
     <div className="Search">
-        <p>search</p>
+        <Bar />
+        <p>search/main page</p>
     </div>
   );
 }
