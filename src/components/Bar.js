@@ -28,7 +28,8 @@ export default function Bar() {
           <Link to="/">Will it Flood?</Link>
           </Typography>
           <Link to="/about" style={{marginRight: 20}}>About</Link>
-          <Link to="/oceans">Oceans</Link>
+          <Link to="/causes" style={{marginRight: 20}}>Causes</Link>
+          <Link to="/effects">Effects</Link>
         </Toolbar>
       </AppBar>
     </div>

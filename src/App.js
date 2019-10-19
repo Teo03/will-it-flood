@@ -6,8 +6,9 @@ import {
 } from "react-router-dom";
 import Search from "./components/Search";
 import Map from "./components/Map";
-import Oceans from "./components/Oceans";
 import About from "./components/About";
+import Causes from "./components/Causes";
+import Effects from "./components/Effects";
 import Bar from './components/Bar';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path="/" exact component={Search} />
           <Route path="/map" exact component={Map} />
           <Route path="/about" exact component={About} />
-          <Route path="/oceans" exact component={Oceans} />
+          <Route path="/causes" exact component={Causes} />
+          <Route path="/effects" exact component={Effects} />
         </Switch>
       </div>
     </Router>
