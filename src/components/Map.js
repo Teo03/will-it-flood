@@ -74,29 +74,34 @@ function MapScreen(props) {
 
     const control = document.getElementById('level');
     const output = document.getElementById('output');
+    const years = document.getElementById('years');
 
     var init = true; 
 
     control.addEventListener('input', function() {
-      output.innerText = control.value;
+      output.innerText = control.value * 100;
+      years.innerText = control.value * 80;
       raster.changed();
       init = false;
     });
 
-    output.innerText = control.value;
+    output.innerText = control.value * 100;
+    years.innerText = control.value;
 
     raster.on('beforeoperations', function(event) {
       if(init) {
         setTimeout(() => {
-          event.data.level = 25;
-          control.value = 25;
-          output.innerText = 25;
+          event.data.level = 10;
+          control.value = 10;
+          output.innerText = 10 * 100;
+          years.innerText = 10 * 80;
           raster.changed();
         }, 1000)
         setTimeout(() => {
-          event.data.level = 50;
-          control.value = 50;
-          output.innerText = 50;
+          event.data.level = 20;
+          control.value = 20;
+          output.innerText = 20 * 100;
+          years.innerText = 20 * 80;
           raster.changed();
         }, 1500)
       }
@@ -107,11 +112,12 @@ function MapScreen(props) {
   }, [props, raster]);
 
   return (
-    <div>
+    <div style={{margin: 20}}>
         <div id="map"></div>
         <div className='slider'>
-          <input id="level" style={{fontSize: 50}} type="range" min="0" max="300" defaultValue='0'/>
-          <h1>Water level: </h1><h2><span id="output"></span> m</h2>
+          <input id="level" style={{fontSize: 50, margin: 20}} type="range" min="0" max="20" defaultValue='0'/>
+          <br />
+          <span style={{display: 'inline', fontSize: 35}}>In   <span id="years" style={{color: 'red'}}></span> years the water will rise <span id="output" style={{color: 'red'}}></span> centimeters!</span>
         </div>
     </div>
   );
