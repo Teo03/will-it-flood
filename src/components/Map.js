@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 var ol = require('openlayers');
 require('openlayers/css/ol.css');
 const Map = ol.Map;
@@ -10,9 +10,10 @@ const RasterSource = ol.source.Raster;
 const TileJSON = ol.source.TileJSON;
 const XYZ = ol.source.XYZ;
 
-class MapScreen extends React.Component {
- 
-  componentDidMount() {
+function MapScreen(props) {
+  useEffect(() => {
+    const { lat, lon } = props.match.params
+    console.log( lat + " " + lon );
     function flood(pixels, data) {
       const pixel = pixels[0];
       if (pixel[3]) {
@@ -74,17 +75,15 @@ class MapScreen extends React.Component {
       event.data.level = control.value;
     });
 
-  }
+  });
 
-  render () {
-    return (
-      <div>
-          <div id="map"></div>
-          <p>Water level: </p><span id="output"></span> m
-          <input id="level" type="range" min="0" max="300" defaultValue='0'/>
-      </div>
-    );
-  }
+  return (
+    <div>
+        <div id="map"></div>
+        <p>Water level: </p><span id="output"></span> m
+        <input id="level" type="range" min="0" max="300" defaultValue='0'/>
+    </div>
+  );
 }
 
 export default MapScreen;
