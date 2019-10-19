@@ -17,7 +17,7 @@ function App() {
         <Bar />
         <Switch>
           <Route path="/" exact component={Search} />
-          <Route path="/map/:lat/:lon" exact component={Map} />
+          <Route path="/map" exact component={Map} />
           <Route path="/about" exact component={About} />
           <Route path="/oceans" exact component={Oceans} />
         </Switch>

@@ -16,7 +16,7 @@ function Search(props) {
       'latitude': position.coords.latitude,
       'longitude': position.coords.longitude
     }
-    props.history.push('/map/' + crd.latitude + '/' + crd.longitude);
+    props.history.push('/map', {crd: crd});
   }
 
   return (

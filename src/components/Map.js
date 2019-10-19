@@ -12,7 +12,8 @@ const XYZ = ol.source.XYZ;
 
 function MapScreen(props) {
   useEffect(() => {
-    const { lat, lon } = props.match.params
+    var lat = props.location.state['crd'].latitude;
+    var lon = props.location.state['crd'].longitude;
     console.log( lat + " " + lon );
     function flood(pixels, data) {
       const pixel = pixels[0];
@@ -57,9 +58,17 @@ function MapScreen(props) {
       ],
       view: new View({
         center: fromLonLat([21.2, 41.23]),
-        zoom: 5
+        zoom: 8
       })
     });
+
+    map.setView(
+      new View({
+          center: ol.proj.fromLonLat([lon, lat]),
+          extent: map.getView().calculateExtent(map.getSize()),   
+          zoom: 5
+        })
+    );
     
     const control = document.getElementById('level');
     const output = document.getElementById('output');
@@ -75,7 +84,7 @@ function MapScreen(props) {
       event.data.level = control.value;
     });
 
-  });
+  }, [props]);
 
   return (
     <div>
