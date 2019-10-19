@@ -11,36 +11,39 @@ const TileJSON = ol.source.TileJSON;
 const XYZ = ol.source.XYZ;
 
 function MapScreen(props) {
+
+  function flood(pixels, data) {
+    const pixel = pixels[0];
+    if (pixel[3]) {
+      const height = -10000 + ((pixel[0] * 256 * 256 + pixel[1] * 256 + pixel[2]) * 0.1);
+      if (height <= data.level) {
+        pixel[0] = 0;
+        pixel[1] = 115;
+        pixel[2] = 182;
+        pixel[3] = 230;
+      } else {
+        pixel[3] = 0;
+      }
+    }
+    return pixel;
+  }
+  
+  const elevation = new XYZ({
+    url: 'https://api.mapbox.com/v4/mapbox.terrain-rgb/{z}/{x}/{y}.pngraw?access_token=pk.eyJ1IjoidGVvMDMwOCIsImEiOiJjazF1d2l5cWcwOWE4M2NvNjFsajVhcHpwIn0.MmkaCjrSsN0s7KRdhF0gKw',
+    crossOrigin: 'anonymous'
+  });
+  
+  const raster = new RasterSource({
+    sources: [elevation],
+    operation: flood
+  });
+  
+
   useEffect(() => {
     var lat = props.location.state['crd'].latitude;
     var lon = props.location.state['crd'].longitude;
     console.log( lat + " " + lon );
-    function flood(pixels, data) {
-      const pixel = pixels[0];
-      if (pixel[3]) {
-        const height = -10000 + ((pixel[0] * 256 * 256 + pixel[1] * 256 + pixel[2]) * 0.1);
-        if (height <= data.level) {
-          pixel[0] = 0;
-          pixel[1] = 115;
-          pixel[2] = 182;
-          pixel[3] = 230;
-        } else {
-          pixel[3] = 0;
-        }
-      }
-      return pixel;
-    }
-    
-    const elevation = new XYZ({
-      url: 'https://api.mapbox.com/v4/mapbox.terrain-rgb/{z}/{x}/{y}.pngraw?access_token=pk.eyJ1IjoidGVvMDMwOCIsImEiOiJjazF1d2l5cWcwOWE4M2NvNjFsajVhcHpwIn0.MmkaCjrSsN0s7KRdhF0gKw',
-      crossOrigin: 'anonymous'
-    });
-    
-    const raster = new RasterSource({
-      sources: [elevation],
-      operation: flood
-    });
-    
+
     const map = new Map({
       target: 'map',
       controls: ol.control.defaults({ attribution: false }),
@@ -66,31 +69,51 @@ function MapScreen(props) {
       new View({
           center: ol.proj.fromLonLat([lon, lat]),
           extent: map.getView().calculateExtent(map.getSize()),   
-          zoom: 5
+          zoom: 7
         })
     );
-    
+
     const control = document.getElementById('level');
     const output = document.getElementById('output');
+
+    var init = true; 
 
     control.addEventListener('input', function() {
       output.innerText = control.value;
       raster.changed();
+      init = false;
     });
 
     output.innerText = control.value;
 
     raster.on('beforeoperations', function(event) {
+      if(init) {
+        setTimeout(() => {
+          event.data.level = 25;
+          control.value = 25;
+          output.innerText = 25;
+          raster.changed();
+        }, 1000)
+        setTimeout(() => {
+          event.data.level = 50;
+          control.value = 50;
+          output.innerText = 50;
+          raster.changed();
+        }, 1500)
+      }
       event.data.level = control.value;
+      init = false;
     });
 
-  }, [props]);
+  }, [props, raster]);
 
   return (
     <div>
         <div id="map"></div>
-        <p>Water level: </p><span id="output"></span> m
-        <input id="level" type="range" min="0" max="300" defaultValue='0'/>
+        <div className='slider'>
+          <input id="level" type="range" min="0" max="300" defaultValue='0'/>
+          <h1>Water level: </h1><h2><span id="output"></span> m</h2>
+        </div>
     </div>
   );
 }
