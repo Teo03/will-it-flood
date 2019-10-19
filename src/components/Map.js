@@ -110,7 +110,7 @@ function MapScreen(props) {
     <div>
         <div id="map"></div>
         <div className='slider'>
-          <input id="level" type="range" min="0" max="300" defaultValue='0'/>
+          <input id="level" style={{fontSize: 50}} type="range" min="0" max="300" defaultValue='0'/>
           <h1>Water level: </h1><h2><span id="output"></span> m</h2>
         </div>
     </div>

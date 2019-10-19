@@ -22,7 +22,7 @@ export default function Bar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: '#2196F3'}}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
           <Link to="/">Will it Flood?</Link>
