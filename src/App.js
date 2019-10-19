@@ -1,7 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter as HashRouter,
   Route
 } from "react-router-dom";
 import Search from "./components/Search";
@@ -13,18 +12,16 @@ import Bar from './components/Bar';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
+      <Bar />
       <div>
-        <Bar />
-        <Switch>
-          <Route path="/" exact component={Search} />
-          <Route path="/map" exact component={Map} />
-          <Route path="/about" exact component={About} />
-          <Route path="/causes" exact component={Causes} />
-          <Route path="/effects" exact component={Effects} />
-        </Switch>
+        <Route path="/" exact component={Search} />
+        <Route path="/map" exact component={Map} />
+        <Route path="/about" exact component={About} />
+        <Route path="/causes" exact component={Causes} />
+        <Route path="/effects" exact component={Effects} />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

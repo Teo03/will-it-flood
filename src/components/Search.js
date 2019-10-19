@@ -24,17 +24,17 @@ function Search(props) {
 
   return (
     <div className='center w3-center'>
-        <div className="w3-center">
-        <h1 className="w3-xxxlarge">Will it Flood?</h1>
-          <div className="w3-padding-32">
-            <button className="w3-btn w3-xlarge" style={{fontWeight: 900, backgroundColor: '#22A3B5', color: 'white'}} onClick={() => getLocation()}>Search for my region</button>
-          </div>
-        </div>
-        <div>
-          <h1 className="w3-center w3-xxlarge w3-animate-bottom">random fact<i onClick={() => setFact(facts[Math.floor(Math.random() * facts.length)])} style={{marginLeft: 13}} class="fa fa-refresh"></i></h1>
-          <h1 className="w3-center w3-xlarge w3-animate-bottom" style={{color: 'green', margin: 50}}>{fact}</h1>
+      <div className="w3-center">
+      <h1 className="w3-xxxlarge">Will it Flood?</h1>
+        <div className="w3-padding-32">
+          <button className="w3-btn w3-xlarge" style={{fontWeight: 900, backgroundColor: '#22A3B5', color: 'white'}} onClick={() => getLocation()}>Search for my region</button>
         </div>
       </div>
+      <div>
+        <h1 className="w3-center w3-xxlarge w3-animate-bottom">random fact<i onClick={() => setFact(facts[Math.floor(Math.random() * facts.length)])} style={{marginLeft: 13}} className="fa fa-refresh"></i></h1>
+        <h1 className="w3-center w3-xlarge w3-animate-bottom" style={{color: 'green', margin: 50}}>{fact}</h1>
+      </div>
+    </div>
   );
 }
 

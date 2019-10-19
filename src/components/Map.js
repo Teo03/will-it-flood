@@ -42,7 +42,6 @@ function MapScreen(props) {
   useEffect(() => {
     var lat = props.location.state['crd'].latitude;
     var lon = props.location.state['crd'].longitude;
-    console.log( lat + " " + lon );
 
     const map = new Map({
       target: 'map',
@@ -96,14 +95,14 @@ function MapScreen(props) {
           output.innerText = 10 * 100;
           years.innerText = 10 * 80;
           raster.changed();
-        }, 1000)
+        }, 1500)
         setTimeout(() => {
           event.data.level = 20;
           control.value = 20;
           output.innerText = 20 * 100;
           years.innerText = 20 * 80;
           raster.changed();
-        }, 1500)
+        }, 2000)
       }
       event.data.level = control.value;
       init = false;

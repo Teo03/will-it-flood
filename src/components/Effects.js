@@ -2,7 +2,7 @@ import React from 'react';
 
 function Effects() {
   return (
-    <div style={{padding: 150}} style={{textAlign: "center"}}>
+    <div style={{padding: 150, textAlign: "center"}}>
     <div className='text-center'>
         <div className="w3-container" id="about">
             <div className="w3-content" style={{maxWidth: 700}}>

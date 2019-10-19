@@ -33,7 +33,6 @@ function About() {
                 </div>
 
                 <div className="w3-twothird">
-                    <h1></h1>
 
                     <h1>Our Mission</h1>
 

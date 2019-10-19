@@ -7,7 +7,7 @@ import ch4 from '../images/ch4.png'
 
 function Causes() {
   return (
-    <div style={{padding: 150}} style={{textAlign: "center"}}>
+    <div style={{padding: 150, textAlign: "center"}}>
         <div className='text-center'>
 
             <div className="w3-container" id="services" style={{marginTop: 75}}>
@@ -23,7 +23,7 @@ function Causes() {
                 atmosphere warms, but so does the possibility of clouds and precipitation, making these some of the most
                 important feedback mechanisms to the greenhouse effect.
             </p>
-            <img style={{margin: 20}} src={h2o} alt="compound" />;
+            <img style={{margin: 20}} src={h2o} alt="compound" />
 
 
         </div>
@@ -36,7 +36,7 @@ function Causes() {
                 cultivation practices, especially the use of commercial and organic fertilizers, fossil fuel combustion,
                 nitric acid production, and biomass burning
             </p>
-            <img style={{margin: 20}} src={n2o} alt="compound" />;
+            <img style={{margin: 20}} src={n2o} alt="compound" />
 
         </div>
 
@@ -49,7 +49,7 @@ function Causes() {
                 eruptions and through human activities such as deforestation, land use changes, and burning fossil fuels.
                 Humans have increased atmospheric CO2 concentration by more than a third since the Industrial Revolution
                 began. This is the most important long-lived "forcing" of climate change.</p>
-            <img style={{margin: 20}} src={co2} alt="compound" />;
+            <img style={{margin: 20}} src={co2} alt="compound" />
         </div>
         <div className="w3-container" id="packages" style={{marginTop: 75}}>
             <h1 className="w3-xxxlarge w3-text-blue"><b>Methan</b></h1>
@@ -59,7 +59,7 @@ function Causes() {
                 especially rice cultivation, as well as ruminant digestion and manure management associated with domestic
                 livestock. On a molecule-for-molecule basis, methane is a far more active greenhouse gas than carbon
                 dioxide, but also one which is much less abundant in the atmosphere.</p>
-            <img style={{margin: 20}} src={ch4} alt="compound" />;
+            <img style={{margin: 20}} src={ch4} alt="compound" />
         </div>
 
 
@@ -70,7 +70,7 @@ function Causes() {
                 industrial origin used in a number of applications, but now largely regulated in production and release to
                 the atmosphere by international agreement for their ability to contribute to destruction of the ozone layer.
                 They are also greenhouse gases.</p>
-            <img style={{margin: 20}} src={cfc} alt="compound" />;
+            <img style={{margin: 20}} src={cfc} alt="compound" />
         </div>
 
         <hr />
