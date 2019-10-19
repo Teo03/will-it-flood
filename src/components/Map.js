@@ -68,7 +68,6 @@ function MapScreen(props) {
     map.setView(
       new View({
           center: ol.proj.fromLonLat([lon, lat]),
-          extent: map.getView().calculateExtent(map.getSize()),   
           zoom: 7
         })
     );
