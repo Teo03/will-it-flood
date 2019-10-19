@@ -31,7 +31,7 @@ function Search(props) {
           </div>
         </div>
         <div>
-          <h1 className="w3-center w3-xxlarge w3-animate-bottom">random fact</h1>
+          <h1 className="w3-center w3-xxlarge w3-animate-bottom">random fact<i onClick={() => setFact(facts[Math.floor(Math.random() * facts.length)])} style={{marginLeft: 13}} class="fa fa-refresh"></i></h1>
           <h1 className="w3-center w3-xlarge w3-animate-bottom" style={{color: 'green', margin: 50}}>{fact}</h1>
         </div>
       </div>
