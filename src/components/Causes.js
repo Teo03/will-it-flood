@@ -10,7 +10,7 @@ function Causes() {
     <div style={{padding: 150, textAlign: "center"}}>
         <div className='text-center'>
 
-            <div className="w3-container" id="services" style={{marginTop: 75}}>
+            <div className="w3-container" id="services">
                 <h1 className="w3-xxxlarge w3-text-blue"><b>CAUSES</b></h1>
                 <hr style={{width: 50, border: 5 }} className="w3-round" />
             </div>
@@ -42,7 +42,7 @@ function Causes() {
 
 
         <div className="w3-container" id="packages" style={{marginTop: 75}}>
-            <h1 className="w3-xxxlarge w3-text-blue"><b>Carbor</b></h1>
+            <h1 className="w3-xxxlarge w3-text-blue"><b>Carbon</b></h1>
             <hr style={{width: 50, border: 5 }} className="w3-round" />
             <p style={{fontSize: 25, padding: 30, margin: -25}}>Carbon dioxide (CO2). A minor but very important component
                 of the atmosphere, carbon dioxide is released through natural processes such as respiration and volcano
@@ -52,7 +52,7 @@ function Causes() {
             <img style={{margin: 20}} src={co2} alt="compound" />
         </div>
         <div className="w3-container" id="packages" style={{marginTop: 75}}>
-            <h1 className="w3-xxxlarge w3-text-blue"><b>Methan</b></h1>
+            <h1 className="w3-xxxlarge w3-text-blue"><b>Methane</b></h1>
             <hr style={{width: 50, border: 5 }} className="w3-round" />
             <p style={{fontSize: 25, padding: 30, margin: -25}}>• Methane. A hydrocarbon gas produced both through natural
                 sources and human activities, including the decomposition of wastes in landfills, agriculture, and
@@ -92,19 +92,19 @@ function Causes() {
                 https://en.wikipedia.org/wiki/El_Ni%C3%B1o
             </p>
             <br />
-            <p style={{fontSize: 25, padding: 30, margin: -25}}><b>2.La Nina</b>
+            <p style={{fontSize: 25, padding: 30, margin: -25}}><b>2.La Nina</b><br />
                 La Nina functions in the same way as El Nino. It is also able to raise the sea temperature up to 6 degrees.
                 La Nina is a weather fluctuation in the climate that affects the atmospheric pressure. Those two work
                 together and cause an increase in the temperature. For more information visit:
                 https://en.wikipedia.org/wiki/La_Ni%C3%B1a
             </p>
             <br />
-            <p style={{fontSize: 25, padding: 30, margin: -25}}><b>3. Cars</b>
+            <p style={{fontSize: 25, padding: 30, margin: -25}}><b>3. Cars</b><br />
                 Cars release harmful gases due to the fossil fuels that they use. When there are a lot of people using cars
                 on land, these gasses end up in the air. The air then travels down over the ocean. The ocean will receive
                 these toxic gasses and damages the ocean’s ability to maintain its normal temperature.</p>
             <br />
-            <p style={{fontSize: 25, padding: 30, margin: -25}}><b>4. Water Pollution</b> Water pollution is a highly
+            <p style={{fontSize: 25, padding: 30, margin: -25}}><b>4. Water Pollution</b><br /> Water pollution is a highly
                 serious condition where the ocean water can get affected too. The polluted water from the rivers in the
                 people’s home can flow right into the ocean. This majorly cause ocean acidification and ocean pollution but
                 it can also cause the temperature of the ocean to rise as a negative reaction to the pollution.

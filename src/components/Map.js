@@ -105,7 +105,7 @@ function MapScreen(props) {
     <div style={{margin: 20}}>
       <div id="map"></div>
       <div className='slider'>
-        <input id="level" style={{fontSize: 50, marginTop: 20}} type="range" min="0" max="20" defaultValue='0'/>
+        <input id="level" style={{fontSize: 50, marginTop: 20}} type="range" min="0" max="250" defaultValue='0'/>
         <p style={{fontSize: 16.5}}>Move the slider above to change the value</p>
         <br />
         <span style={{display: 'inline', fontSize: 35}}>In   <span id="years" style={{color: 'red'}}></span> years the water will rise <span id="output" style={{color: 'red'}}></span> centimeters!</span>

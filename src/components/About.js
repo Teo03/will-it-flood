@@ -52,8 +52,8 @@ function About() {
 
 
                     <p style={{fontSize: 20}}className="w3-text-black">Planet Earth Protocol is a page created and designed
-                        by a team of five people. All of them high schoolers with a mission to save lives. Their names are
-                        Kristijan Krstevski, Teodor Bogoeski, Marija Velkovska, Stefanija Cvetanovska and Sofija Tasevska.
+                        by a team of five people. All of them high schoolers with a mission to save lives. Their names are 
+                        <b> Stefanija Cvetanovska Teodor Bogoeski, Marija Velkovska, Kristijan Krstevski and Sofija Tasevska.</b>
                     </p>
                 </div>
 

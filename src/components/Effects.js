@@ -6,7 +6,7 @@ function Effects() {
     <div className='text-center'>
         <div className="w3-container" id="about">
             <div className="w3-content" style={{maxWidth: 700}}>
-                <div className="w3-container" id="services" style={{marginTop: 75}}>
+                <div className="w3-container" id="services">
                     <h1 className="w3-xxxlarge w3-text-blue"><b>EFFECTS</b></h1>
                     <hr style={{width: 50, border: 5 }} className="w3-round" />
                 </div>
