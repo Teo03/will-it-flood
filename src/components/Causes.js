@@ -7,14 +7,15 @@ import ch4 from '../images/ch4.png'
 
 function Causes() {
   return (
-    <div style={{padding: 150, textAlign: "center"}}>
+    <div style={{textAlign: "center"}}>
         <div className='text-center'>
 
-            <div className="w3-container" id="services">
+            <div className="w3-container" id="services" style={{ paddingTop: 20}}>
                 <h1 className="w3-xxxlarge w3-text-blue"><b>CAUSES</b></h1>
                 <hr style={{width: 50, border: 5 }} className="w3-round" />
             </div>
         </div>
+        <div style={{padding: 25}}>
         <div className="w3-container" id="services" style={{marginTop: 75}}>
             <h1 className="w3-xxxlarge w3-text-blue"><b>Water vapor</b></h1>
             <hr style={{width: 50, border: 5 }} className="w3-round" />
@@ -74,7 +75,7 @@ function Causes() {
         </div>
 
         <hr />
-        <div className="w3-container" id="packages" style={{marginTop: 75}}>
+        <div className="w3-container" id="packages" style={{marginTop: 75, padding: 20}}>
             <h1 className="w3-xxxlarge w3-text-blue"><b>Other Contributing Factors to the Rising of Ocean Temperatures</b>
             </h1>
             <hr style={{width: 50, border: 5 }} className="w3-round" />
@@ -109,7 +110,7 @@ function Causes() {
                 people’s home can flow right into the ocean. This majorly cause ocean acidification and ocean pollution but
                 it can also cause the temperature of the ocean to rise as a negative reaction to the pollution.
             </p>
-
+            </div>
         </div>
     </div>
   );

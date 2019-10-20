@@ -2,10 +2,10 @@ import React from 'react';
 
 function Effects() {
   return (
-    <div style={{padding: 150, textAlign: "center"}}>
+    <div style={{textAlign: "center"}}>
     <div className='text-center'>
         <div className="w3-container" id="about">
-            <div className="w3-content" style={{maxWidth: 700}}>
+            <div className="w3-content" style={{maxWidth: 700, paddingTop: 20}}>
                 <div className="w3-container" id="services">
                     <h1 className="w3-xxxlarge w3-text-blue"><b>EFFECTS</b></h1>
                     <hr style={{width: 50, border: 5 }} className="w3-round" />
