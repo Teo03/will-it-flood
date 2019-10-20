@@ -72,17 +72,6 @@ function Effects() {
                     see deadly storms that enter inland than they did earlier, putting the lives of every single living
                     being on earth into risk.</p>
                 <hr />
-                <div className="w3-container" id="services" style={{marginTop: 75}}>
-                    <h1 className="w3-xxxlarge w3-text-blue"><b>Why is this happening?</b></h1>
-                    <hr style={{width: 50, border: 5 }} className="w3-round" />
-                </div>
-                <p style={{fontSize: 20}}>The rise in sea level is occurred mainly by two factors linked to global warming,
-                    i.e the melting of ice sheets as </p>
-                <hr />
-                <div className="w3-container" id="services" style={{marginTop: 75}}>
-                    <h1 className="w3-xxxlarge w3-text-blue"><b>Efects of sea-level rise</b></h1>
-                    <hr style={{width: 50, border: 5 }} className="w3-round" />
-                </div>
                 <p style={{fontSize: 20}}>These rising sea levels pose a major threat to island nations and coastal areas
                     meaning that these areas could be swamped and submerged by water anytime in the future. In countries
                     like the United States, where almost 40% of the population resides in coastal areas, the flooding due to

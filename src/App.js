@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as HashRouter,
+  BrowserRouter,
   Route
 } from "react-router-dom";
 import Search from "./components/Search";
@@ -12,7 +12,7 @@ import Bar from './components/Bar';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={'will-it-flood'}>
       <Bar />
       <div>
         <Route path="/" exact component={Search} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/causes" exact component={Causes} />
         <Route path="/effects" exact component={Effects} />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
