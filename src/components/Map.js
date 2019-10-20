@@ -89,20 +89,11 @@ function MapScreen(props) {
 
     raster.on('beforeoperations', function(event) {
       if(init) {
-        setTimeout(() => {
-          event.data.level = 10;
-          control.value = 10;
-          output.innerText = 10 * 100;
-          years.innerText = 10 * 80;
-          raster.changed();
-        }, 1500)
-        setTimeout(() => {
-          event.data.level = 20;
-          control.value = 20;
-          output.innerText = 20 * 100;
-          years.innerText = 20 * 80;
-          raster.changed();
-        }, 2000)
+        event.data.level = 2;
+        control.value = 2;
+        output.innerText = 2 * 100;
+        years.innerText = 2 * 80;
+        raster.changed();
       }
       event.data.level = control.value;
       init = false;
@@ -114,7 +105,8 @@ function MapScreen(props) {
     <div style={{margin: 20}}>
       <div id="map"></div>
       <div className='slider'>
-        <input id="level" style={{fontSize: 50, margin: 20}} type="range" min="0" max="20" defaultValue='0'/>
+        <input id="level" style={{fontSize: 50, marginTop: 20}} type="range" min="0" max="20" defaultValue='0'/>
+        <p style={{fontSize: 16.5}}>Move the slider above to change the value</p>
         <br />
         <span style={{display: 'inline', fontSize: 35}}>In   <span id="years" style={{color: 'red'}}></span> years the water will rise <span id="output" style={{color: 'red'}}></span> centimeters!</span>
       </div>
